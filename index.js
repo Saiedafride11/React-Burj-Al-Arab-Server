@@ -9,7 +9,6 @@ require('dotenv').config()
 
 var uri = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-shard-00-00.jumub.mongodb.net:27017,cluster0-shard-00-01.jumub.mongodb.net:27017,cluster0-shard-00-02.jumub.mongodb.net:27017/burjAlArab?ssl=true&replicaSet=atlas-20e537-shard-0&authSource=admin&retryWrites=true&w=majority`;
 
-const password = "arabian111";
 
 
 var serviceAccount = require("./config/react-firebase-burj-al-a-20138-firebase-adminsdk-duj77-de07556c7d.json");
@@ -30,8 +29,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
-app.get('/', function (req, res) {
-  res.send('hello world')
+
+app.get('/', (req, res) => {
+  res.send('hello working Project')
 })
 
 
