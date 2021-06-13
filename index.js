@@ -11,8 +11,8 @@ var uri = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-shar
 
 
 
-// var serviceAccount = require("./config/react-firebase-burj-al-a-20138-firebase-adminsdk-duj77-de07556c7d.json");
-var serviceAccount = require(`${process.env.DB_SITE}`);
+var serviceAccount = require("./config/react-firebase-burj-al-a-20138-firebase-adminsdk-duj77-de07556c7d.json");
+
 
 
 admin.initializeApp({
